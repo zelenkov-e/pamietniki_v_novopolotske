@@ -1,20 +1,45 @@
 'use strict';
-
+//gulpfile.js
 // Load plugins
 const browsersync = require('browser-sync').create();
 const del = require('del');
 const gulp = require('gulp');
 const merge = require('merge-stream');
+const nodemon = require('gulp-nodemon');
 
 // BrowserSync
+// function browserSync(done) {
+//   browsersync.init({
+//     server: {
+//       baseDir: './',
+//     },
+//     port: 3000,
+//   });
+//   done();
+// }
+
 function browserSync(done) {
-  browsersync.init({
-    server: {
-      baseDir: './',
-    },
+  browsersync.init(null, {
+    baseDir: './',
+    proxy: 'http://localhost:5000',
     port: 3000,
   });
   done();
+}
+
+function nodemonSync(cb) {
+  var started = false;
+
+  nodemon({
+    script: 'app.js',
+  }).on('start', function() {
+    // to avoid nodemon being started multiple times
+    // thanks @matthisk
+    if (!started) {
+      cb();
+      started = true;
+    }
+  });
 }
 
 // BrowserSync reload
@@ -51,7 +76,8 @@ function watchFiles() {
 // Define complex tasks
 const vendor = gulp.series(clean, modules);
 const build = gulp.series(vendor);
-const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
+// const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync));
+const watch = gulp.series(build, gulp.parallel(watchFiles, browserSync, nodemonSync));
 
 // Export tasks
 exports.clean = clean;
