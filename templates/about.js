@@ -4,7 +4,7 @@ let about = `
      <hr />
           <p>Более 20-ти лет на рынке, выполнение работ любой категории сложности,
                 возможность изготовления по эскизам и размерам заказчика.</p>
-     <a class="btn btn-primary btn-lg" href="#">Написать нам &raquo;</a>
+     <a class="btn btn-primary btn-lg" href="#" onclick="onNavigate('/contact'); return false;">Написать нам &raquo;</a>
 </div>
 <div class="row">
         <div class="col-md-4 mb-5">

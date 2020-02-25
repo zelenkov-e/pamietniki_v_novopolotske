@@ -50,7 +50,6 @@ let contact = `
   <h2>Наши контакты</h2>
   <hr />
   <address>
-    <strong>Start Bootstrap</strong>
     <br />г. Новополоцк, <br />ул. Молодёжная, д.45, корп. 2, офис 1.
     <br />
   </address>
