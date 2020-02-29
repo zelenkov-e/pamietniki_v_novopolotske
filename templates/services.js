@@ -13,7 +13,7 @@ let services = `
 <div class="row">
         <div class="col-md-4 mb-5">
           <div class="card h-100">
-            <img class="card-img-top" src="http://placehold.it/300x200" alt="" />
+            <img class="card-img-top" src="/assets/servises/reconstruction.png" alt="" />
             <div class="card-body">
               <h4 class="card-title">Card title</h4>
               <p class="card-text">
@@ -28,7 +28,7 @@ let services = `
         </div>
         <div class="col-md-4 mb-5">
           <div class="card h-100">
-            <img class="card-img-top" src="http://placehold.it/300x200" alt="" />
+            <img class="card-img-top" src="/assets/servises/discount.png" alt="" />
             <div class="card-body">
               <h4 class="card-title">Card title</h4>
               <p class="card-text">
@@ -43,7 +43,37 @@ let services = `
         </div>
         <div class="col-md-4 mb-5">
           <div class="card h-100">
-            <img class="card-img-top" src="http://placehold.it/300x200" alt="" />
+            <img class="card-img-top" src="/assets/servises/free_storage.png" alt="" />
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                necessitatibus neque.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="card h-100">
+            <img class="card-img-top" src="/assets/servises/restoration.png" alt="" />
+            <div class="card-body">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+                necessitatibus neque.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Find Out More!</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-5">
+          <div class="card h-100">
+            <img class="card-img-top" src="/assets/servises/consultant.png" alt="" />
             <div class="card-body">
               <h4 class="card-title">Card title</h4>
               <p class="card-text">

@@ -8,9 +8,15 @@ var app = express();
 
 app.use(express.static('.'));
 app.use(bodyParser());
+app.use(redirectUnmatched);
+
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
+
+function redirectUnmatched(req, res) {
+  res.redirect('/');
+}
 
 app.post('/', function(req, res) {
   var name = req.body.name;
