@@ -6,3 +6,11 @@
 body {
   padding-top: 56px;
 }
+
+.bg-main {
+  background-image: url('/assets/main_bg.jpg');
+}
+
+h1 {
+  font-family: 'Anton';
+}

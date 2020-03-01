@@ -43,7 +43,7 @@ let contact = `
   </div>
   <div class="form-group form-check">
   </div>
-  <button type="submit" class="btn btn-primary">отправить</button>
+  <button type="submit" class="btn btn-dark">отправить</button>
 </form>
 </div>
 <div class="col-md-5 mb-5">

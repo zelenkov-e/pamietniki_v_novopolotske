@@ -11,10 +11,11 @@
     <link type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link type="text/css" href="css/business-frontpage.css" rel="stylesheet" />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
-    <script type="text/javascript" src="./templates/home.js"></script>
-    <script type="text/javascript" src="./templates/about.js"></script>
-    <script type="text/javascript" src="./templates/services.js"></script>
-    <script type="text/javascript" src="./templates/contact.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet" />
+    <script type="text/javascript" src="./pages/home.js"></script>
+    <script type="text/javascript" src="./pages/about.js"></script>
+    <script type="text/javascript" src="./pages/services.js"></script>
+    <script type="text/javascript" src="./pages/contact.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -30,10 +31,20 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div
+          class="collapse navbar-collapse"
+          id="navbarResponsive"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+        >
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a href="document/resume.doc" title="">скачать прайс</a>
+              <!-- <a href="document/resume.doc" title="">скачать прайс</a> -->
+              <a
+                href="https://drive.google.com/file/d/1UcyNxAmMEWugf2rz9jAoj5L9xS8Hd20G/view?usp=sharing"
+                title=""
+                >скачать прайс</a
+              >
             </li>
 
             <li class="nav-item ">
@@ -61,12 +72,12 @@
         </div>
       </div>
     </nav>
-    <header class="bg-primary py-5 mb-5">
+    <header class=" bg-main py-5 mb-5">
       <div class="container h-100">
         <div class="row h-100 align-items-center">
           <div class="col-lg-12">
             <h1 class="display-4 text-white mt-5 mb-2">Памятники в Новополоцке и Полоцке</h1>
-            <p class="lead mb-5 text-white-50">
+            <p class="lead text-white" mb-5 text-white-50">
               Новополоцк, Полоцк. Гранитные памятники в ассортименте. Изготовление, установка,
               благоустройство, консультация. Портрет ручной работы. Гарантия.
             </p>

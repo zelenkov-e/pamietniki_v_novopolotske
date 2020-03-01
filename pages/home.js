@@ -7,7 +7,7 @@ let home = ` <div class="col-md-8 mb-5">
   Скамейки, вазы, столешницы из природного камня. 
   Сезонные скидки, рассрочка, бесплатное хранение.
   </p>
-  <a class="btn btn-primary btn-lg" href="#" onclick="onNavigate('/contact'); return false;">Написать нам &raquo;</a> 
+  <a class="btn btn-dark btn-lg" href="#" onclick="onNavigate('/contact'); return false;">Написать нам &raquo;</a> 
  </div> 
 <div class="col-md-4 mb-5">
   <h2>Наши контакты</h2>
