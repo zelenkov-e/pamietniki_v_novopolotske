@@ -54,10 +54,7 @@ let contact = `
     <br />
   </address>
   <address>
-    <abbr title="Phone">телефон.:</abbr>
     8 (0214) 52 99 91, 8 (029) 353 85 00, 8 (029) 714 59 99.
-    <br />
-    <abbr title="Email">почта:</abbr>
     <a href="mailto:#">krupenko_lena@mail.ru</a>
   </address>
 </div>

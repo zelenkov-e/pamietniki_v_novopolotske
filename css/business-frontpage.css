@@ -5,12 +5,26 @@
  */
 body {
   padding-top: 56px;
+  font-family: jubilat, Lora, Merriweather, Georgia, Times New Roman, Times, serif;
 }
 
 .bg-main {
   background-image: url('/assets/main_bg.jpg');
 }
 
-h1 {
-  font-family: 'Anton';
+.img-content {
+  background-color: black;
+  opacity: 0.5;
 }
+
+.main-title {
+  font-weight: 800;
+}
+
+.copyright {
+  color: #fff;
+}
+
+/* h1 { */
+/* font-family: 'Anton'; */
+/* } */
