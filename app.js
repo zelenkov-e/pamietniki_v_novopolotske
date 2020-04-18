@@ -3,22 +3,19 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-
 var app = express();
 
 app.use(express.static('.'));
-app.use(bodyParser());
-app.use(redirectUnmatched);
-
-app.get('/', function(req, res) {
+app.use(bodyParser.json());
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
+app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
-
-function redirectUnmatched(req, res) {
-  res.redirect('/');
-}
-
-app.post('/', function(req, res) {
+app.post('/', function (req, res) {
   var name = req.body.name;
   var email = req.body.email;
   var phone = req.body.phone;
@@ -42,8 +39,8 @@ app.post('/', function(req, res) {
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'zelenkovzhenya@gmail.com',
-      pass: '***', //real password
+      user: 'zelenkovzhenya',
+      pass: 'ZelenkoV20101986',
     },
   });
 
@@ -77,5 +74,11 @@ app.post('/', function(req, res) {
     }
   });
 });
+
+// add redirect to '/'
+// function redirectUnmatched(req, res) {
+//   res.redirect('/');
+// }
+// app.use(redirectUnmatched);
 
 app.listen(5000);
