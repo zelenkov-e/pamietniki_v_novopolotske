@@ -1,21 +1,21 @@
-'use strict';
+"use strict";
 
-var express = require('express');
-var bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
+var express = require("express");
+var bodyParser = require("body-parser");
+const nodemailer = require("nodemailer");
 var app = express();
 
-app.use(express.static('.'));
+app.use(express.static("."));
 app.use(bodyParser.json());
 app.use(
   bodyParser.urlencoded({
     extended: true,
   })
 );
-app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/index.html');
+app.get("/", function (req, res) {
+  res.sendFile(__dirname + "/index.html");
 });
-app.post('/', function (req, res) {
+app.post("/", function (req, res) {
   var name = req.body.name;
   var email = req.body.email;
   var phone = req.body.phone;
@@ -37,17 +37,17 @@ app.post('/', function (req, res) {
                  `;
 
   let transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: "gmail",
     auth: {
-      user: 'zelenkovzhenya',
-      pass: 'ZelenkoV20101986',
+      user: "*****",
+      pass: "*****",
     },
   });
 
   let mailOptions = {
     // from: email,
-    to: 'zelenkovzhenya@gmail.com', // куда будет приходить
-    subject: 'Письмо с сайта',
+    to: "zelenkovzhenya@gmail.com", // куда будет приходить
+    subject: "Письмо с сайта",
     html: content,
   };
 
@@ -55,14 +55,14 @@ app.post('/', function (req, res) {
     if (error) {
       console.log(error);
     } else {
-      console.log('Email sent: ' + info.response);
+      console.log("Email sent: " + info.response);
     }
   });
 
   let mailAnswerOptions = {
-    from: 'zelenkovzhenya@gmail.com',
+    from: "zelenkovzhenya@gmail.com",
     to: email,
-    subject: 'Письмо с сайта Пямятники',
+    subject: "Письмо с сайта Пямятники",
     html: response,
   };
 
@@ -70,7 +70,7 @@ app.post('/', function (req, res) {
     if (error) {
       console.log(error);
     } else {
-      console.log('Email sent: ' + info.response);
+      console.log("Email sent: " + info.response);
     }
   });
 });
