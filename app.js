@@ -21,32 +21,36 @@ app.post("/", function (req, res) {
   var phone = req.body.phone;
   var message = req.body.message;
   var content = `
-                <h1>У вас новое сообщение с сайта:</h1>
-                 <ul>
-                    <li>Клиент: ${name}</<li> 
-                    <li>почта: ${email}</<li> 
-                    <li>телефон: ${phone}</<li>
-                    <li>сообщение: ${message}</<li>
-                 </ul>
-                 `;
+      <h2>У вас новое сообщение с сайта granit_polotsk.by</h2>
+          <h3>
+            получено сообщение
+          </h3>
+          <p>клиент: ${name}</p> 
+          <p>почта: ${email}</p> 
+          <p>телефон: ${phone}</p>
+          <p>сообщение: ${message}</p>
+        `;
   var response = `
-                <h1>У вас новое сообщение с сайта :</h1>
-                 <p>
-                    Сообщение получено
-                 </p>
-                 `;
+    <h2>У вас новое сообщение с сайта granit_polotsk.by</h2>
+      <h3>
+        Сообщение доставлено
+      </h3>
+      <p>
+        В ближайшее время наш консультант с Вами свяжется. Если у Вас есть вопросы,
+          Вы можете набрать на номер телефона указанный на сайте. 
+      </p>
+      `;
 
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "*****",
-      pass: "*****",
+      user: "zelenkovzhenya",
+      pass: "ZelenkoV20101986",
     },
   });
 
   let mailOptions = {
-    // from: email,
-    to: "zelenkovzhenya@gmail.com", // куда будет приходить
+    to: "zelenkovzhenya@gmail.com",
     subject: "Письмо с сайта",
     html: content,
   };

@@ -18,21 +18,18 @@ window.onpopstate = () => {
   rootDiv.innerHTML = routes[window.location.pathname];
 };
 
-const handleChange = () => {
-  const phoneValue = document.getElementById("phone").value;
-  const emailValue = document.getElementById("email").value;
-
-  phoneValue.length > 0 &&
-    emailValue.length > 0 &&
+const handleInputChange = (value) => {
+  const inputValue = document.getElementById(value).value;
+  // handleValiadationForm();
+  if (inputValue.length > 0) {
     $("#btn_send").removeAttr("disabled");
+  } else {
+    $("#btn_send").prop("disabled", true);
+  }
 };
 
-const showNoticeMessage = () => {
-  $(".alert").show();
-  <!-- onNavigate("/home"); -->
-};
-
-$("#target").submit(function (event) {
-  onNavigate("/home");
-  event.preventDefault();
+document.addEventListener("submit", (e) => {
+  // e.preventDefault();
+  toastr.success("сообщение успешно отпрвлено");
+  // onNavigate("/home");
 });
