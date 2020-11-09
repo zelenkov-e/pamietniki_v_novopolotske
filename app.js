@@ -79,10 +79,4 @@ app.post("/", function (req, res) {
   });
 });
 
-// add redirect to '/'
-// function redirectUnmatched(req, res) {
-//   res.redirect('/');
-// }
-// app.use(redirectUnmatched);
-
 app.listen(5000);
