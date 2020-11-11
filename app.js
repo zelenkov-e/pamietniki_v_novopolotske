@@ -21,7 +21,7 @@ app.post("/", function (req, res) {
   var phone = req.body.phone;
   var message = req.body.message;
   var content = `
-      <h2>У вас новое сообщение с сайта granit_polotsk.by</h2>
+      <h2>У вас новое сообщение с сайта galmei.by</h2>
           <h3>
             получено сообщение
           </h3>
@@ -44,13 +44,13 @@ app.post("/", function (req, res) {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "zelenkovzhenya",
-      pass: "ZelenkoV20101986",
+      user: "galmei.zakaz",
+      pass: "04031964galmei",
     },
   });
 
   let mailOptions = {
-    to: "zelenkovzhenya@gmail.com",
+    to: "galmei.zakaz@gmail.com",
     subject: "Письмо с сайта",
     html: content,
   };
@@ -64,7 +64,7 @@ app.post("/", function (req, res) {
   });
 
   let mailAnswerOptions = {
-    from: "zelenkovzhenya@gmail.com",
+    from: "galmei.zakaz@gmail.com",
     to: email,
     subject: "Письмо с сайта Пямятники",
     html: response,

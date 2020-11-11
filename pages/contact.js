@@ -58,8 +58,10 @@ let contact = `
     <br />
   </address>
   <address>
-    8 (0214) 52 99 91, 8 (029) 353 85 00, 8 (029) 714 59 99.
-    <a href="mailto:#">krupenko_lena@mail.ru</a>
+    8 (0214) 52 99 91,<br/> 
+    8 (029) 353 85 00,<br/>
+    <i class="fab fa-viber"></i> 8 (029) 714 59 99.<br/>
+    <a href="mailto:#">galmei.zakaz@gmail.com</a>
   </address>
 </div>
 `;

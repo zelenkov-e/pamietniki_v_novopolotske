@@ -20,7 +20,6 @@ window.onpopstate = () => {
 
 const handleInputChange = (value) => {
   const inputValue = document.getElementById(value).value;
-  // handleValiadationForm();
   if (inputValue.length > 0) {
     $("#btn_send").removeAttr("disabled");
   } else {
@@ -29,7 +28,5 @@ const handleInputChange = (value) => {
 };
 
 document.addEventListener("submit", (e) => {
-  // e.preventDefault();
   toastr.success("сообщение успешно отпрвлено");
-  // onNavigate("/home");
 });
